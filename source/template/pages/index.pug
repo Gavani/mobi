@@ -1,5 +1,123 @@
 extends ../main-layout
+block variables
+  -
+    var title = "AXILinteriors - Bine ați venit";
+    var nav =[
+      {
+        text : "Dormitoare",
+        href : "#",
+        src  : "img.png",
+        class : "bedroom"
+      },
+      {
+        text : "Saltele",
+        href : "#",
+        src  : "img.png",
+        class : "mattresses"
+      },
+      {
+        text : "Bucătărie",
+        href : "#",
+        src  : "img.png",
+        class : "kitchen"
+      },
+      {
+        text : "Dulap cupe",
+        href : "#",
+        src  : "img.png",
+        class : "cupboard"
+      },
+      {
+        text : "Living",
+        href : "#",
+        src  : "img.png",
+        class : "living"
+      },
+      {
+        text : "Pentru copii",
+        href : "#",
+        src  : "img.png",
+        class : "childrens"
+      },
+      {
+        text : "Canapele",
+        href : "#",
+        src  : "img.png",
+        class : "couches"
+      },
+      {
+        text : "Antreuri",
+        href : "#",
+        src  : "img.png",
+        class : "hall"
+      },
+      {
+        text : "Banchete",
+        href : "#",
+        src  : "img.png",
+        class : "banquet"
+      },
+      {
+        text : "Mese calculator",
+        href : "#",
+        src  : "img.png",
+        class : "tables"
+      },
+      {
+        text : "Oficiu",
+        href : "#",
+        src  : "img.png",
+        class : "office"
+      },
+      {
+        text : "Usi interior",
+        href : "#",
+        src  : "img.png",
+        class : "inside-doors"
+      },
+      {
+        text : "usi exterior",
+        href : "#",
+        src  : "img.png",
+        class : "outside-doors"
+      },
+      {
+        text : "utilaj comercial",
+        href : "#",
+        src  : "img.png",
+        class : "comercial-equipment"
+      },
+      {
+        text : "Diverse",
+        href : "#",
+        src  : "img.png",
+        class : "other"
 
+      }
+    ];
 
 block content 
   include ../parts/header
+  .x-body.x-landing
+    main.main(role="main")
+      section.hero
+        .container-lg
+          .hero__bg-container
+            .hero__bg
+              .hero__logo
+              form.hero__form(action="")
+                .hero__form-serch
+                  input(type="text").hero__form-search-input
+                  span.hero__form-search-icon
+                    <i class="fas fa-search"></i>
+      section.x-landing__navigation
+        .container
+          ul.x-landing__navigation-list
+            each item in nav
+              li(class=`x-landing__navigation-item x-landing__navigation-item-${item.class}`)
+                a.x-landing__navigation-link(href=`${item.href}`)
+                  div.x-landing__navigation-img
+                    img.x-landing__navigation-pic(src=`${item.src}`)
+                  div.x-landing__navigation-text= item.text
+      section.x-landing__whyus
+        .container-lg

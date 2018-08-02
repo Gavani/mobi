@@ -15,10 +15,7 @@ module.exports = function () {
         .pipe($.gp.autoprefixer(
             $.config.browsers
         ))
-        .pipe($.cssunit({
-            type     :    'px-to-rem',
-            rootSize :    16
-        }))
+        .pipe($.gp.pxtorem())
         .pipe($.gp.sourcemaps.write())
         .pipe($.gulp.dest($.config.build + '/assets/styles'))
         .pipe($.browserSync.reload({
@@ -33,10 +30,7 @@ module.exports = function () {
         .pipe($.gp.autoprefixer(
             $.config.browsers
         ))
-        .pipe($.cssunit({
-            type     :    'px-to-rem',
-            rootSize :    16
-        }))
+        .pipe($.gp.pxtorem)
         .pipe($.gp.csscomb())
         .pipe($.gp.csso())
         .pipe($.gp.rename('main.min.css'))
