@@ -1,0 +1,29 @@
+mixin socials (additionClass)
+  -
+    var links =[
+      {
+        name: "facebook",
+        href: "https://fb.com/"
+      },
+      {
+        name: "instagram",
+        href: "https://www.instagram.com/"
+      },
+      {
+        name: "vk",
+        href: "https://vk.com/"
+      },
+      {
+        name: "odnoklassniki",
+        href: "https://www.ok.ru/"
+      }
+    ];
+
+  ul(class=`socials__list socials__${additionClass}`)
+    each item in links
+      li.socials__item
+        a.socials__item-link(href=`${item.href}` target="_blank")
+          if item.name == "facebook"
+            i(class=`fab fa-${item.name}-f`)
+          else
+            i(class=`fab fa-${item.name}`)

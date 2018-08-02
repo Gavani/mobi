@@ -1,0 +1,15 @@
+header.header 
+  .container
+    .header__logo
+      h1 AXILinteriors
+    .header__contacts
+      a.header__contacts-phone(href="tel:+37369472878") +373 00 000 000
+    .header__language
+      ul.header__language-dropdown
+        each item in ["RO", "RU"]
+          li(class=`header__language-dropdown-item header__language-dropdown-item-active header__language-dropdown-${item}`)
+            .header__language-dropdown-img(class=`header__language-dropdown-img-${item}`)
+            .header__language-dropdown-text(class=`header__language-dropdown-text-${item}`)= item
+    .header__socials
+      include socials
+      +socials('header')
