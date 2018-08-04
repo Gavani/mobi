@@ -183,47 +183,54 @@
 
 .x-landing-counter{
   margin-bottom: 100px;
-  padding: 70px 0;
+  padding: 70px 0 0 0;
   background-image: -webkit-linear-gradient(left top, #119ec7, #ab2ca5);
+  .container-lg{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 }
 .counter__container{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-bottom: 70px;
 }
 .counter__text{
   h2{
     color: #fff;
-    font-size: 46px;
+    font-size: 26px;
     font-weight: 600;
     letter-spacing: 5px;
     padding-bottom: 50px;
+    text-align: center;
   }
 }
 .counter__icon{
   background: #fff;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
   svg{
-    font-size: 56px;
+    font-size: 36px;
     color:  #119ec7;
   }
 }
 .counter__nmb{
   background: rgba(255, 255, 255, 0.6);
-  padding: 0px 16px 19px 40px;
+  padding: 10px 20px 18px 23px;
   border-radius: 15px;
   span{
-    font-size: 74px;
-    padding-bottom: 2px;
+    font-size: 36px;
     color: #fff;
     font-weight: 900;
-    letter-spacing: 40px;
+    letter-spacing: 4px;
   }
 }
