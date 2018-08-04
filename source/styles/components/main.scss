@@ -66,12 +66,13 @@
 .fa-search{
   color: rgb(187, 187, 187);
 }
-
+.x-landing__navigation{
+  margin-bottom: 100px;
+}
 .x-landing__navigation-list{
   display: flex;  
   flex-wrap: wrap;
   margin-left: -20px;
-  margin-bottom: 100px;
 }
 .x-landing__navigation-item{
   flex: 1 1 150px;
@@ -127,7 +128,9 @@
   height: 100%;
   transition: .2s linear;
 }
-
+.x-landing__whyus{
+  padding-bottom: 100px;
+}
 .whyus__bg{
   background: url('../img/backgrounds/whyus_bg.jpg') center no-repeat;
   background-size: cover;
@@ -148,7 +151,6 @@
   align-items: center;
   justify-content: space-around;
   padding: 50px 0 100px 0;
-  margin-bottom: 100px;
 
 }
 .whyus__opportunities-item{

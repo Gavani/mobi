@@ -1,0 +1,148 @@
+.footer{
+  padding: 30px 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  &:before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #EEEEEE;
+    position: absolute;
+    bottom: 100%;
+  }
+
+}
+.footer__up{
+  padding-bottom: 21px;
+  position: relative;
+
+  &:after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 99%;
+    width: 100%;
+    height: 1px;
+    background: #EEEEEE; 
+  }
+  .container-lg{
+    display: flex;
+  }
+}
+.footer__left, .footer__right{
+  width: 50%;
+}
+.footer__text{
+  font-size: 26px;
+  font-weight: 900;
+  padding-bottom: 10px;
+}
+.menu__footer{
+  .menu__list{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 300px;
+  }
+  .menu__item{
+    margin: 0 100px 10px 0;
+    cursor: pointer;
+    &:hover{
+      .menu__link{
+        color: $blue;
+        text-decoration: underline;
+      }
+    }
+  }
+  .menu__link{
+    color: $txtgray;
+    font-weight: 600;
+    transition: .2s linear;
+  }
+}
+.footer__right{
+  display: flex;
+  flex-direction: column;
+  padding-left: 10%;
+}
+.footer__contacts-call{
+  padding-bottom: 20px;
+}
+.footer__contacts-call-link{
+  display: inline-block;
+  font-size: 18px;
+  padding: 15px 15px;
+  background: $blue;
+  border-radius: 5px;
+  color: #fff;
+  text-decoration: none;
+  transition: .2s linear;
+  &:hover{
+    background: #2b5661
+  }
+}
+.footer__contacts-call-link-icon{
+  padding-right: 10px;
+  svg{
+    color: #fff;
+  }
+}
+.footer__contacts-schedule{
+  .footer__contacts-schedule-container{
+    &:first-child{
+      .footer__contacts-schedule-day{
+        color: #1f7a1f;
+      }
+    }
+    &:nth-child(2){
+      .footer__contacts-schedule-day{
+        color: #b3b300;
+      }
+    }
+    &:last-child{
+      .footer__contacts-schedule-day{
+        color: #b30000;
+      }
+    }
+  }
+}
+.footer__contacts-schedule-day{
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 900;
+  width: 125px;
+  margin-bottom: 20px;
+}
+.footer__contacts-schedule-time{
+  font-weight: 900;
+  color: #424242;
+}
+.footer__bottom{
+  padding-top: 30px;
+  .container-lg{
+    display: flex;
+    align-items: center;
+  }
+}
+.footer__bottom-left-copyright{
+  p{
+    font-size: 14PX;
+  }
+}
+.socials__footer{
+  .socials__item{
+    width: 25px;
+    height: 25px;
+    &:before{
+      width: 25px;
+      height: 25px;
+    }
+  }
+  .socials__item-link{
+    svg{
+      font-size: 16px;
+    }
+  }
+}

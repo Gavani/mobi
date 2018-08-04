@@ -1,24 +1,34 @@
 footer.footer 
-  .container-lg
-    include menu
-    +menu("footer")
-    .footer__contacts
-    .footer__contacts-head
-      p Contactează-ne
-    .footer__contacts-call
-      a.footer__contacts-call-link(href="tel:+37300000000")
-        span.footer__contacts-call-link-icon
-          <i class="fas fa-phone"></i>
-        span.footer__contacts-call-link-text Doriți să ne sunați?
-    .footer__contacts-schedule
-      .footer__contacts-schedule-container
-        span.footer__contacts-schedule-day Luni-Vineri: 
-        span.footer__contacts-schedule-time 08:00 - 19:00
-      .footer__contacts-schedule-container
-        span.footer__contacts-schedule-day Sâmbătă: 
-        span.footer__contacts-schedule-time 09:00 - 17:00
-      .footer__contacts-schedule-container
-        span.footer__contacts-schedule-day  Duminică: 
-        span.footer__contacts-schedule-time Închis
-    include socials
-    +socials(footers)
+  .footer__up
+    .container-lg
+      .footer__left
+        .footer__menu-container
+          .footer__text  Navigare
+          include menu
+          +menu("footer")
+      .footer__right
+        .footer__contacts
+        .footer__text Contactează-ne
+        .footer__contacts-call
+          a.footer__contacts-call-link(href="tel:+37300000000")
+            span.footer__contacts-call-link-icon
+              <i class="fas fa-phone"></i>
+            span.footer__contacts-call-link-text Doriți să ne sunați?
+        .footer__contacts-schedule
+          .footer__contacts-schedule-container
+            span.footer__contacts-schedule-day Luni-Vineri: 
+            span.footer__contacts-schedule-time 08:00 - 19:00
+          .footer__contacts-schedule-container
+            span.footer__contacts-schedule-day Sâmbătă: 
+            span.footer__contacts-schedule-time 09:00 - 17:00
+          .footer__contacts-schedule-container
+            span.footer__contacts-schedule-day  Duminică: 
+            span.footer__contacts-schedule-time Închis
+  .footer__bottom
+    .container-lg
+      .footer__left
+        .footer__bottom-left-copyright
+          p © AXILinteriors all right reserved 2008-1018
+      .footer__right
+        include socials
+        +socials('footer')

@@ -97,23 +97,23 @@
   padding: 15px 0 0 0;
 }
 .menu__header{
-  .footer__menu-list{
+  .menu__list{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
     margin-left: -30px;
   }
-  .footer__menu-item{
+  .menu__item{
     margin-left: 30px;
     margin-bottom: 15px;
     &:hover{
-      .footer__menu-link{
+      .menu__link{
         color: $red;;
       }
     }
   }
-  .footer__menu-link{
+  .menu__link{
     font-weight: bold;
     transition: .2s linear;
   }

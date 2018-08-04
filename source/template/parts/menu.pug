@@ -67,8 +67,8 @@ mixin menu (additionClass)
       }
     ]
 
-  .menu(class=`menu__${additionClass}`)
-      ul.footer__menu-list
+  .menu(class=` menu menu__${additionClass}`)
+      ul.menu__list
         each item in nav
-          li.footer__menu-item
-            a.footer__menu-link(href=`${item.href}`)= item.name
+          li.menu__item
+            a.menu__link(href=`${item.href}`)= item.name
