@@ -1,15 +1,31 @@
 header.header 
-  .container
+  .container-lg.header__container-lg-up
     .header__logo
-      h1 AXILinteriors
+      h1 
+        a(href="index.html").header__logo-link AXILinteriors
     .header__contacts
-      a.header__contacts-phone(href="tel:+37369472878") +373 00 000 000
+      a.header__contacts-phone(href="tel:+37300000000") 
+        span.header__contacts-phone-icon <i class="fas fa-phone"></i>
+        span.header__contacts-phone-nmbr +373 00 000 000
     .header__language
       ul.header__language-dropdown
-        each item in ["RO", "RU"]
-          li(class=`header__language-dropdown-item header__language-dropdown-item-active header__language-dropdown-${item}`)
-            .header__language-dropdown-img(class=`header__language-dropdown-img-${item}`)
-            .header__language-dropdown-text(class=`header__language-dropdown-text-${item}`)= item
+        li(class=`header__language-dropdown-item header__language-dropdown-item-active`)
+          .header__language-dropdown-img(class=`header__language-dropdown-img-ro`)
+            img(src=`assets/img/icons/flags/RO.png`)
+          .header__language-dropdown-text(class=`header__language-dropdown-text-ro`) RO
+        li(class=`header__language-dropdown-item header__language-dropdown-item-hiden`)
+          .header__language-dropdown-img(class=`header__language-dropdown-img-ru`)
+            img(src=`assets/img/icons/flags/RU.png`)
+          .header__language-dropdown-text(class=`header__language-dropdown-text-ru`) RU
+      .header__language-arrow-down.header__language-arrow
+        <i class="fas fa-angle-down"></i>
+      .header__language-arrow-up.header__language-arrow
+        <i class="fas fa-angle-up"></i>
     .header__socials
       include socials
       +socials('header')
+  .header__line
+  .container-lg.container-lg-down
+    include menu
+    +menu('header')
+  .header__line

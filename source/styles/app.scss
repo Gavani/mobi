@@ -1,4 +1,10 @@
-
+//mixins
+$black   : #221924;
+$red     : #C93932;
+$blue    : #2B5661;
+$txtgray : #6f6f6f;;
+$gray    : #EEEEEE;
+$bgray   : #F6F4EE;
 //layout setups
 @import 'layout/fonts';
 @import 'layout/setups';
@@ -7,5 +13,7 @@
 @import 'helpers/mixins';
 
 //blocks
-@import 'blocks/**/*.scss'
+@import 'blocks/**/*.scss';
 
+//components
+@import 'components/**/*.scss'

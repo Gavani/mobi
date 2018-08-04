@@ -1,0 +1,74 @@
+mixin menu (additionClass)
+  -
+    var nav =[
+      {
+        name : "Dormitoare",
+        href : "#"
+      },
+      {
+        name : "Saltele",
+        href : "#"
+      },
+      {
+        name : "Bucatarie",
+        href : "#"
+      },
+      {
+        name : "Dulap cupe",
+        href : "#"
+      },
+      {
+        name : "Living",
+        href : "#"
+      },
+      {
+        name : "Dormitoare",
+        href : "#"
+      },
+      {
+        name : "Pentru copii",
+        href : "#"
+      },
+      {
+        name : "Canapele",
+        href : "#"
+      },
+      {
+        name : "Antreuri",
+        href : "#"
+      },
+      {
+        name : "Banchete",
+        href : "#"
+      },
+      {
+        name : "Mese calculator",
+        href : "#"
+      },
+      {
+        name : "Oficiu",
+        href : "#"
+      },
+      {
+        name : "Uși interior",
+        href : "#"
+      },
+      {
+        name : "Uși exterior",
+        href : "#"
+      },
+      {
+        name : "Utilaj comercial",
+        href : "#"
+      },
+      {
+        name : "Diverse",
+        href : "#"
+      }
+    ]
+
+  .menu(class=`menu__${additionClass}`)
+      ul.footer__menu-list
+        each item in nav
+          li.footer__menu-item
+            a.footer__menu-link(href=`${item.href}`)= item.name

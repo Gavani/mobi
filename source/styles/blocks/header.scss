@@ -1,0 +1,133 @@
+.header{
+  padding: 30px 0 0 0;
+}
+.header__line{
+  width: 100%;
+  height: 1px;
+  background: $gray;
+}
+.header__container-lg-up{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 30px;
+  position: relative;
+}
+.header__logo-link{
+  text-decoration: none;
+  color: $black;
+}
+.header__contacts{
+  display: flex;
+}
+.header__contacts-phone{
+  margin-right: 30px;
+  display: block;
+  color: $black;
+  font-size: 19px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  transition: .2s linear;
+  &:hover{
+    text-decoration: none;
+    .fa-phone{
+      animation-name: phone_ring;
+      animation-duration: .3s;
+    }
+  }
+}
+.header__contacts-phone-icon{
+  margin-right: 5px;
+}
+.fa-phone{
+  transform: rotate(95deg);
+  color: #009688 ;
+}
+.header__contacts-phone-nmbr{
+  display: block;
+  height: 35px;
+}
+.header__language{
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  &:hover{
+    .header__language-arrow-down{
+      display: none;
+    }
+    .header__language-arrow-up{
+      display: inline-block;
+    }
+    .header__language-dropdown-item-hiden{
+      left: 0;
+    }
+  }
+}
+
+.header__language-dropdown-item{
+  display: flex;
+  align-items: center;
+}
+.header__language-dropdown-item-hiden{
+  position: absolute;
+  height: 50px;
+  left: 999999px;
+}
+.header__language-dropdown-item-active{
+  display: flex;
+}
+.header__language-dropdown-img{
+  margin-right: 5px;
+  width: 25px;
+  height: 25px;
+  img{
+    width: 100%;
+    height: 100%;
+  }
+}
+.header__language-arrow{
+  margin-left: 5px;
+}
+.header__language-arrow-up{
+  display: none;
+}
+.container-lg-down{
+  padding: 15px 0 0 0;
+}
+.menu__header{
+  .footer__menu-list{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: -30px;
+  }
+  .footer__menu-item{
+    margin-left: 30px;
+    margin-bottom: 15px;
+    &:hover{
+      .footer__menu-link{
+        color: $red;;
+      }
+    }
+  }
+  .footer__menu-link{
+    font-weight: bold;
+    transition: .2s linear;
+  }
+}
+
+
+
+
+
+//Animation
+@keyframes phone_ring{
+  0%   {transform: rotate(95deg);}
+  25%  {transform: rotate(105deg);}
+  50%  {transform: rotate(95deg);}
+  75%  {transform: rotate(105deg);}
+  100% {transform: rotate(95deg);}
+}

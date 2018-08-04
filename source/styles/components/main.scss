@@ -1,0 +1,229 @@
+.hero{
+  padding-bottom: 50px;
+}
+.hero, .x-landing__navigation{
+  background: $bgray;
+}
+
+.hero__bg{
+  background: url('../img/backgrounds/wall.jpg') bottom no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.hero__logo, .hero__form{
+  margin-left: 100px;
+}
+.hero__logo{
+  background: #fff;
+  width: 250px;
+  height: 100px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  h1{
+    font-size: 36px;
+    font-weight: 900;
+    color: $red;
+  }
+}
+.hero__form-serch-label{
+  position: relative;
+}
+.hero__form-search-input{
+  padding: 7px 35px;
+  border: 1px solid $txtgray;
+  border-radius: 3px;
+  transition: .2s linear;
+
+  &:focus{
+    padding: 7px 10px;
+    outline: 2px solid #7a9aa2;
+    +.hero__form-search-icon{
+      left: 100%;
+      height: 34px;
+      width: 41px;
+      background: #7a9aa2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .fa-search{
+        color: #fff;
+      }
+    }
+  }
+}
+.hero__form-search-icon{
+  @include centered(y);
+  left: 10px;
+  transition: .2s linear;
+}
+.fa-search{
+  color: rgb(187, 187, 187);
+}
+
+.x-landing__navigation-list{
+  display: flex;  
+  flex-wrap: wrap;
+  margin-left: -20px;
+  margin-bottom: 100px;
+}
+.x-landing__navigation-item{
+  flex: 1 1 150px;
+  margin: 0  0 50px 20px;
+}
+.x-landing__navigation-link{
+  display: block;
+  text-decoration: none;
+  position: relative;
+  color: #fff;
+  font-weight: 900;
+  font-size: 20px;
+  &:hover{
+    .x-landing__navigation-img{
+      &:before{
+        background: rgba(#fff, .0);
+      }
+    }
+    .x-landing__navigation-text{
+      color: $red;
+    }
+    .x-landing__navigation-pic{
+      width: 110%;
+      height: 110%;
+    }
+  }
+}
+.x-landing__navigation-text{
+  text-align: center;
+  color: $blue;
+}
+.x-landing__navigation-img{
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 50%;
+  margin: 0 auto 10px  auto;
+  transition: .2s linear;
+  &:before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(4, 23, 33, 0.42);
+    transition: inherit;
+  }
+}
+.x-landing__navigation-pic{
+  width: 100%;
+  height: 100%;
+  transition: .2s linear;
+}
+
+.whyus__bg{
+  background: url('../img/backgrounds/whyus_bg.jpg') center no-repeat;
+  background-size: cover;
+  width: 100%;
+  position: relative;
+}
+.whyus__text{
+  text-align: center;
+  padding-top: 50px;
+  font-size: 46px;
+  font-weight: 900;
+  color: #fff;
+}
+.whyus__opportunities-list{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  padding: 50px 0 100px 0;
+  margin-bottom: 100px;
+
+}
+.whyus__opportunities-item{
+  width: 210px;
+    background: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.whyus__opportunities-icon{
+  width: 100px;
+  height: 100px;
+  background: $gray;
+  border-radius: 50%;
+  margin: 20px auto 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  svg{
+    font-size: 40px;
+    color: #009688;
+  }
+}
+.whyus__opportunities-text{
+  font-size: 18px;
+  font-weight: 900;
+  padding-bottom: 10px;
+}
+
+.x-landing-counter{
+  margin-bottom: 100px;
+  padding: 70px 0;
+  background-image: -webkit-linear-gradient(left top, #119ec7, #ab2ca5);
+}
+.counter__container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.counter__text{
+  h2{
+    color: #fff;
+    font-size: 46px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    padding-bottom: 50px;
+  }
+}
+.counter__icon{
+  background: #fff;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  svg{
+    font-size: 56px;
+    color:  #119ec7;
+  }
+}
+.counter__nmb{
+  background: rgba(255, 255, 255, 0.6);
+  padding: 0px 16px 19px 40px;
+  border-radius: 15px;
+  span{
+    font-size: 74px;
+    padding-bottom: 2px;
+    color: #fff;
+    font-weight: 900;
+    letter-spacing: 40px;
+  }
+}

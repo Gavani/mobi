@@ -6,108 +6,109 @@ block variables
       {
         text : "Dormitoare",
         href : "#",
-        src  : "img.png",
+        src  : "assets/img/backgrounds/menu/bed-3.jpg",
         class : "bedroom"
       },
       {
         text : "Saltele",
         href : "#",
-        src  : "img.png",
+        src  : "assets/img/backgrounds/menu/mattres-3.jpg",
         class : "mattresses"
       },
       {
         text : "Bucătărie",
         href : "#",
-        src  : "img.png",
+        src  : "assets/img/backgrounds/menu/kitchen-1.jpg",
         class : "kitchen"
       },
       {
         text : "Dulap cupe",
         href : "#",
-        src  : "img.png",
+        src  : "assets/img/backgrounds/menu/wardrobe-1.jpg",
         class : "cupboard"
       },
       {
         text : "Living",
         href : "#",
-        src  : "img.png",
+        src  : "assets/img/backgrounds/menu/living-room-2.jpg",
         class : "living"
       },
       {
         text : "Pentru copii",
         href : "#",
-        src  : "img.png",
+        src  : "assets/img/backgrounds/menu/children-3.jpg",
         class : "childrens"
       },
       {
         text : "Canapele",
         href : "#",
-        src  : "img.png",
+        src  : "assets/img/backgrounds/menu/couch-3.jpg",
         class : "couches"
       },
       {
         text : "Antreuri",
         href : "#",
-        src  : "img.png",
+        src  : "assets/img/backgrounds/menu/antreu-2.jpg",
         class : "hall"
       },
       {
         text : "Banchete",
         href : "#",
-        src  : "img.png",
+        src  : "assets/img/backgrounds/menu/banquet-2.jpg",
         class : "banquet"
       },
       {
         text : "Mese calculator",
         href : "#",
-        src  : "img.png",
+        src  : "assets/img/backgrounds/menu/pctable.jpg",
         class : "tables"
       },
       {
         text : "Oficiu",
         href : "#",
-        src  : "img.png",
+        src  : "assets/img/backgrounds/menu/office-1.jpg",
         class : "office"
       },
       {
-        text : "Usi interior",
+        text : "Uși interior",
         href : "#",
-        src  : "img.png",
+        src  : "assets/img/backgrounds/menu/door-2.jpg",
         class : "inside-doors"
       },
       {
-        text : "usi exterior",
+        text : "Uși exterior",
         href : "#",
-        src  : "img.png",
+        src  : "assets/img/backgrounds/menu/outside-1.jpg",
         class : "outside-doors"
       },
       {
-        text : "utilaj comercial",
+        text : "Utilaj comercial",
         href : "#",
-        src  : "img.png",
+        src  : "assets/img/backgrounds/menu/vitrina.jpg",
         class : "comercial-equipment"
       },
       {
         text : "Diverse",
         href : "#",
-        src  : "img.png",
+        src  : "assets/img/backgrounds/menu/other.jpg",
         class : "other"
 
       }
     ];
 
 block content 
-  include ../parts/header
   .x-body.x-landing
     main.main(role="main")
+      include ../parts/header
       section.hero
         .container-lg
-          .hero__bg-container
-            .hero__bg
-              .hero__logo
-              form.hero__form(action="")
-                .hero__form-serch
-                  input(type="text").hero__form-search-input
+          .hero__bg
+            .hero__logo 
+              h1 AXILinteriors
+            form.hero__form(action="")
+              .hero__form-serch
+                label.hero__form-serch-label
+                  input(type="text" placeholder="Găsiți orice...").hero__form-search-input
                   span.hero__form-search-icon
                     <i class="fas fa-search"></i>
       section.x-landing__navigation
@@ -121,3 +122,61 @@ block content
                   div.x-landing__navigation-text= item.text
       section.x-landing__whyus
         .container-lg
+          .whyus__bg
+            h2.whyus__text De ce noi ?
+            ul.whyus__opportunities-list
+              li.whyus__opportunities-item
+                .whyus__opportunities-icon
+                  <i class="fas fa-shipping-fast"></i>
+                .whyus__opportunities-text
+                  p Livrare rapidă
+                .whyus__opportunities-desc
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              li.whyus__opportunities-item
+                .whyus__opportunities-icon
+                  <i class="fas fa-hand-holding-usd"></i>
+                .whyus__opportunities-text
+                  p Prețuri decente
+                .whyus__opportunities-desc
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              li.whyus__opportunities-item
+                .whyus__opportunities-icon
+                  <i class="fas fa-couch"></i>
+                .whyus__opportunities-text
+                  p Modele noi
+                .whyus__opportunities-desc
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              li.whyus__opportunities-item
+                .whyus__opportunities-icon
+                  <i class="fas fa-check"></i>
+                .whyus__opportunities-text
+                  p Calitate superioară
+                .whyus__opportunities-desc
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      section.x-landing-counter
+        .container-lg
+          .counter__container
+            .counter__text
+              h2 Clienți mulțumiți
+            .counter__icon  
+              <i class="fas fa-rocket"></i>
+            .counter__nmbr-container
+              .counter__nmb 
+                span 539
+          .counter__container
+            .counter__text
+              h2 Clienți mulțumiți
+            .counter__icon  
+              <i class="fas fa-rocket"></i>
+            .counter__nmbr-container
+              .counter__nmb 
+                span 539
+          .counter__container
+            .counter__text
+              h2 Clienți mulțumiți
+            .counter__icon  
+              <i class="fas fa-rocket"></i>
+            .counter__nmbr-container
+              .counter__nmb 
+                span 539
+    include ../parts/footer        
