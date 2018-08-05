@@ -125,10 +125,18 @@
     display: flex;
     align-items: center;
   }
+  .footer__right{
+    @include tablet{
+     padding-left: 15%;
+    }
+  }
 }
 .footer__bottom-left-copyright{
   p{
-    font-size: 14PX;
+    font-size: 14px;
+    @include tablet{
+     font-size: 13px;
+    }
   }
 }
 .socials__footer{

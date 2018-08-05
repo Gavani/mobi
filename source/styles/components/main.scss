@@ -1,4 +1,4 @@
-.hero{
+ .hero{
   padding-bottom: 50px;
 }
 .hero, .x-landing__navigation{
@@ -13,6 +13,9 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  @include laptop{
+   height: 300px;
+  }
 }
 .hero__logo, .hero__form{
   margin-left: 100px;
@@ -143,6 +146,9 @@
   font-size: 46px;
   font-weight: 900;
   color: #fff;
+  @include laptop{
+   font-size: 36px;
+  }
 }
 .whyus__opportunities-list{
   width: 100%;
@@ -152,14 +158,28 @@
   justify-content: space-around;
   padding: 50px 0 100px 0;
 
+    @include laptop{
+      padding: 30px 0 60px 0;
+    }
 }
 .whyus__opportunities-item{
   width: 210px;
-    background: #fff;
-    text-align: center;
-    padding: 10px 20px;
-    border-radius: 10px;
-    cursor: pointer;
+  background: #fff;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+
+  @include desktop{
+    width: 185px;
+  }
+  @include laptop{
+   width: 165px;
+  }
+  @include tablet{
+   margin: 10px;
+   width: 200px;
+  }
 }
 .whyus__opportunities-icon{
   width: 100px;
@@ -176,13 +196,53 @@
     font-size: 40px;
     color: #009688;
   }
+
+  @include desktop{
+   width: 70px;
+   height: 70px;
+   svg{
+     font-size: 30px;
+   }
+  }
+  @include laptop{
+   width: 50px;
+   height: 50px;
+   svg{
+     font-size: 24px
+   }
+  }
+  @include tablet{
+   width: 100px;
+   height: 100px;
+   svg{
+     font-size: 40px;
+   }
+  }
 }
 .whyus__opportunities-text{
   font-size: 18px;
   font-weight: 900;
   padding-bottom: 10px;
+  @include desktop{
+   font-size: 16px;
+  }
+  @include laptop{
+   font-size: 14px;
+  }
+  @include tablet{
+   font-size: 18px;
+  }
 }
-
+.whyus__opportunities-desc{
+  @include laptop{
+   p{
+     font-size: 13px;
+   }
+  }
+  @include tablet{
+   font-size: 15px;
+  }
+}
 .x-landing-counter{
   margin-bottom: 100px;
   padding: 70px 0 0 0;
@@ -209,6 +269,16 @@
     letter-spacing: 5px;
     padding-bottom: 50px;
     text-align: center;
+    @include desktop{
+     font-size: 18px;
+    }
+    @include laptop{
+      letter-spacing: 1px;
+    }
+    @include tablet{
+     padding: 20px;
+     font-size: 14px;
+    }
   }
 }
 .counter__icon{
@@ -224,6 +294,14 @@
     font-size: 36px;
     color:  #119ec7;
   }
+  @include desktop{
+   width: 60px;
+   height: 60px;
+
+   svg{
+     font-size: 24px;
+   }
+  }
 }
 .counter__nmb{
   background: rgba(255, 255, 255, 0.6);
@@ -234,5 +312,11 @@
     color: #fff;
     font-weight: 900;
     letter-spacing: 4px;
+  }
+  @include desktop{
+    padding: 10px 20px 13px 23px;
+   span{
+     font-size: 22px;
+   }
   }
 }

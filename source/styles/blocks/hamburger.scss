@@ -1,0 +1,52 @@
+.hamburger__menu{
+  position: relative;
+  display: none;
+  @include phone{
+   display: block;
+  }
+}
+.hamburger__menu-label{
+  width: 100px;
+  display: block;
+  cursor: pointer;
+}
+.hamburger__menu-input-hidden{
+  display: none;
+  &:checked{
+    + .hamburger__menu-label{
+        .hamburger__menu-closed{
+          display: none;
+        }
+        .hamburger__menu-open{
+          display: block;
+        }
+    }
+    ~ .hamburger__menu-wrap{
+      left: 0;
+    }
+  }
+}
+.hamburger__menu-open{
+  display: none;
+}
+.hamburger__menu-closed, .hamburger__menu-open{
+  svg{
+    font-size: 24px;
+  }
+}
+.hamburger__menu-wrap{
+  position: absolute;
+  width: 250px;
+  background: $bgray;
+  z-index: 2;
+  top: 58px;
+  left: 99999px;
+}
+.menu__hamburger{
+  .menu__item{
+    padding: 10px;
+  }
+  .menu__link{
+    font-size: 16px;
+  }
+}

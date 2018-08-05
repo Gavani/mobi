@@ -5,12 +5,12 @@ $blue    : #3a7585;;
 $txtgray : #6f6f6f;;
 $gray    : #EEEEEE;
 $bgray   : #F6F4EE;
+//mixins
+@import 'helpers/mixins';
+
 //layout setups
 @import 'layout/fonts';
 @import 'layout/setups';
-
-//mixins
-@import 'helpers/mixins';
 
 //blocks
 @import 'blocks/**/*.scss';

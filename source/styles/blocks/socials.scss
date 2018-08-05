@@ -27,6 +27,15 @@
       }
     }
   }
+  @include laptop{
+   width: 29px;
+   height: 30px;
+   margin-left: 10px;
+   &:before{
+     width: 25px;
+     height: 25px;
+   }
+  }
 }
 .socials__item-link{
   position: relative;
@@ -42,5 +51,10 @@
     color: $blue;
     font-size: 25px;
     transition: .2s linear;
+  }
+  @include laptop{
+   svg{
+     font-size: 16px;
+   }
   }
 }

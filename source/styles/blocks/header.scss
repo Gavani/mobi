@@ -12,13 +12,87 @@
   align-items: center;
   padding-bottom: 30px;
   position: relative;
+  @include phone{
+   flex-wrap: wrap;
+  }
+}
+.header__logo{
+  @include phone{
+    flex: 1;
+  }
 }
 .header__logo-link{
   text-decoration: none;
   color: $black;
+  @include laptop{
+   font-size: 24px;
+  }
 }
 .header__contacts{
+  padding-right: 10px;
+}
+.header__contacts-dropdown-container{
+  @include tablet{
+    position: relative;
+    width: 35px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid transparent;
+    &:hover{
+      background: $bgray;
+      border-top-color: #ccc;
+      border-left-color: #ccc;
+      border-right-color: #ccc;
+      .header__contacts-droped-container{
+        left: -1px;
+      }
+    }
+  }
+}
+.header__contacts-dropdown-icon{
+  display: none;
+  font-size: 22px;
+  @include tablet{
+   display: block;
+  }
+}
+.header__contacts-droped-container{
   display: flex;
+  justify-content: space-around;
+  padding-top: 9px;
+  padding-left: 20px;
+  @include tablet{
+    padding: 10px;
+    position: absolute;
+    left: 99999991px;
+    top: 28px;
+    width: 190px;
+    flex-direction: column;
+    background: $bgray;
+    border: 1px solid #ccc;
+    &:before{
+      content: "";
+      display: block;
+      width: 100%;
+      height: 20px;
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+    }
+    &:after{
+      content: "";
+      display: block;
+      width: 33px;
+      height: 1px;
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      background: $bgray;
+    }
+  }
 }
 .header__contacts-phone{
   margin-right: 30px;
@@ -36,9 +110,26 @@
       animation-duration: .3s;
     }
   }
+  @include desktop{
+   font-size: 18px;
+  }
+  @include laptop{
+   font-size: 16px;
+   padding-top: 12px;
+  }
+  @include tablet{
+    padding: 0;
+    margin: 0;
+  }
 }
 .header__contacts-phone-icon{
   margin-right: 5px;
+  @include laptop{
+   margin-top: -10px;
+   svg{
+     font-size: 13px;
+   }
+  }
 }
 .fa-phone{
   transform: rotate(95deg);
@@ -64,6 +155,12 @@
       left: 0;
     }
   }
+  @include desktop{
+    padding-right: 15px;
+  }
+  @include phone{
+   padding-right: 0;
+  }
 }
 
 .header__language-dropdown-item{
@@ -86,6 +183,10 @@
     width: 100%;
     height: 100%;
   }
+  @include laptop{
+   width: 20px;
+   height: 20px;
+  }
 }
 .header__language-arrow{
   margin-left: 5px;
@@ -93,8 +194,11 @@
 .header__language-arrow-up{
   display: none;
 }
-.container-lg-down{
+.header__container-lg-down{
   padding: 15px 0 0 0;
+  @include phone{
+   display: none;
+  }
 }
 .menu__header{
   .menu__list{

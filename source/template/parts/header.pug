@@ -4,9 +4,16 @@ header.header
       h1 
         a(href="index.html").header__logo-link AXILinteriors
     .header__contacts
-      a.header__contacts-phone(href="tel:+37300000000") 
-        span.header__contacts-phone-icon <i class="fas fa-phone"></i>
-        span.header__contacts-phone-nmbr +373 00 000 000
+      .header__contacts-dropdown
+        .header__contacts-dropdown-container
+          <i class="fas fa-phone header__contacts-dropdown-icon"></i>
+          .header__contacts-droped-container
+            a.header__contacts-phone(href="tel:+37300000000") 
+              span.header__contacts-phone-icon <i class="fas fa-phone"></i>
+              span.header__contacts-phone-nmbr +373 00 000 000
+            a.header__contacts-phone(href="tel:+37300000000") 
+              span.header__contacts-phone-icon <i class="fas fa-phone"></i>
+              span.header__contacts-phone-nmbr +373 00 000 000
     .header__language
       ul.header__language-dropdown
         li(class=`header__language-dropdown-item header__language-dropdown-item-active`)
@@ -21,11 +28,21 @@ header.header
         <i class="fas fa-angle-down"></i>
       .header__language-arrow-up.header__language-arrow
         <i class="fas fa-angle-up"></i>
+    .hamburger__menu
+      input(type="checkbox" id="hamburger__menu-input" class="hamburger__menu-input-hidden")
+      label(for="hamburger__menu-input").hamburger__menu-label
+        .hamburger__menu-closed
+          <i class="fas fa-bars"></i>
+        .hamburger__menu-open
+          <i class="fas fa-times"></i>
+      nav.hamburger__menu-wrap
+        include menu
+        +menu('hamburger')
     .header__socials
       include socials
       +socials('header')
   .header__line
-  .container-lg.container-lg-down
+  .container-lg.header__container-lg-down
     include menu
     +menu('header')
   .header__line

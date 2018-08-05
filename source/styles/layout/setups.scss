@@ -1,29 +1,58 @@
-html, body{
-    height: 100%;
-}
 body{
     @include raleway;
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
     line-height: 1.42;
     color: $black;
+    @include laptop{
+     font-size: 15px;
+    }
+    @include tablet{
+     font-size: 14px
+    }
+    @include phone{
+     font-size: 12px;
+    }
 }
 
 .wrapper{
     position: relative;
     min-height: 100%;
-    min-width: 1200px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
 }
 .container-lg{
-    width: 1120px;
+    width: 1170px;
     margin: 0 auto;
+    @include desktop{
+        width: 899px;
+    }
+    @include laptop{
+     width: 725px;
+    }
+    @include tablet{
+        width: 535px;
+    }
+    @include phone{
+     width: 95%;
+    }
 }
 .container{
     width: 900px;
     margin: 0 auto;
+    @include desktop{
+     width: 750px;
+    }
+    @include laptop{
+     width: 645px;
+    }
+    @include tablet{
+     width: 475px;
+    }
+    @include phone{
+     width: 85%;
+    }
 }
 ul{
     padding: 0;
