@@ -28,6 +28,14 @@ header.header
         <i class="fas fa-angle-down"></i>
       .header__language-arrow-up.header__language-arrow
         <i class="fas fa-angle-up"></i>
+    .header__socials
+      include socials
+      +socials('header')
+  .header__line
+  .container-lg.header__container-lg-down
+    include menu
+    +menu('header')
+  .container-lg.header__container-lg-down-phone
     .hamburger__menu
       input(type="checkbox" id="hamburger__menu-input" class="hamburger__menu-input-hidden")
       label(for="hamburger__menu-input").hamburger__menu-label
@@ -41,8 +49,4 @@ header.header
     .header__socials
       include socials
       +socials('header')
-  .header__line
-  .container-lg.header__container-lg-down
-    include menu
-    +menu('header')
   .header__line

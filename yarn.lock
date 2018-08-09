@@ -3259,7 +3259,14 @@ istextorbinary@2.2.1:
     editions "^1.3.3"
     textextensions "2"
 
-jquery@^3.3.1:
+jquery.counterup@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/jquery.counterup/-/jquery.counterup-2.1.0.tgz#96665d01460322d6d2320fa9dde3013cc7d12f60"
+  dependencies:
+    jquery ">=1.5.0"
+    waypoints ">=3.0"
+
+jquery@>=1.5.0, jquery@^3.3.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
 
@@ -6293,6 +6300,10 @@ vow@0.4.4:
 vow@~0.4.0:
   version "0.4.17"
   resolved "https://registry.yarnpkg.com/vow/-/vow-0.4.17.tgz#b16e08fae58c52f3ebc6875f2441b26a92682904"
+
+waypoints@>=3.0, waypoints@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/waypoints/-/waypoints-4.0.1.tgz#09979a0573810b29627cba4366a284a062ec69c8"
 
 whet.extend@~0.9.9:
   version "0.9.9"

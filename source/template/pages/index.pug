@@ -120,35 +120,35 @@ block content
                   div.x-landing__navigation-img
                     img.x-landing__navigation-pic(src=`${item.src}`)
                   div.x-landing__navigation-text= item.text
-      section.x-landing__whyus
+      section.x-landing__whyus#hello
         .container-lg
           .whyus__bg
             h2.whyus__text De ce noi ?
             ul.whyus__opportunities-list
               li.whyus__opportunities-item
                 .whyus__opportunities-icon
-                  <i class="fas fa-shipping-fast"></i>
+                  <i class="fas fa-shipping-fast whyus__opportunities-icon-car"></i>
                 .whyus__opportunities-text
                   p Livrare rapidă
                 .whyus__opportunities-desc
                   p Lorem ipsum dolor sit amet consectetur adipisicing elit.
               li.whyus__opportunities-item
                 .whyus__opportunities-icon
-                  <i class="fas fa-hand-holding-usd"></i>
+                  <i class="fas fa-hand-holding-usd whyus__opportunities-icon-bounce"></i>
                 .whyus__opportunities-text
                   p Prețuri decente
                 .whyus__opportunities-desc
                   p Lorem ipsum dolor sit amet consectetur adipisicing elit.
               li.whyus__opportunities-item
                 .whyus__opportunities-icon
-                  <i class="fas fa-couch"></i>
+                  <i class="fas fa-couch whyus__opportunities-icon-bounce"></i>
                 .whyus__opportunities-text
                   p Modele noi
                 .whyus__opportunities-desc
                   p Lorem ipsum dolor sit amet consectetur adipisicing elit.
               li.whyus__opportunities-item
                 .whyus__opportunities-icon
-                  <i class="fas fa-check"></i>
+                  <i class="fas fa-check whyus__opportunities-icon-pulse"></i>
                 .whyus__opportunities-text
                   p Calitate superioară
                 .whyus__opportunities-desc
@@ -162,7 +162,7 @@ block content
               <i class="fas fa-pencil-alt"></i>
             .counter__nmbr-container
               .counter__nmb 
-                span 068
+                span.counter 068
           .counter__container
             .counter__text
               h2 Clienți mulțumiți
@@ -170,7 +170,7 @@ block content
               <i class="fas fa-rocket"></i>
             .counter__nmbr-container
               .counter__nmb 
-                span 539
+                span.counter 539
           .counter__container
             .counter__text
               h2 Ani de experiență
@@ -178,5 +178,5 @@ block content
               <i class="fas fa-crown"></i>
             .counter__nmbr-container
               .counter__nmb 
-                span 10
+                span.counter 10
     include ../parts/footer        

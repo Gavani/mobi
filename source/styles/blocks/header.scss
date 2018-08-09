@@ -1,5 +1,7 @@
 .header{
-  padding: 30px 0 0 0;
+  background: #fff;
+  position: relative;
+  z-index: 3;
 }
 .header__line{
   width: 100%;
@@ -10,10 +12,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 30px;
+  padding: 30px 0;
   position: relative;
+  .header__socials{
+    @include phone{
+     display: none;
+    }
+  }
   @include phone{
    flex-wrap: wrap;
+   padding: 10px 0;
   }
 }
 .header__logo{
@@ -48,6 +56,9 @@
       border-right-color: #ccc;
       .header__contacts-droped-container{
         left: -1px;
+        @include phone{
+         left: -65px;
+        }
       }
     }
   }
@@ -64,6 +75,7 @@
   justify-content: space-around;
   padding-top: 9px;
   padding-left: 20px;
+  z-index: 2;
   @include tablet{
     padding: 10px;
     position: absolute;
@@ -91,6 +103,12 @@
       bottom: 100%;
       left: 0;
       background: $bgray;
+    }
+  }
+  @include phone{
+    width: 165px;
+    &:after{
+      left: 64px;
     }
   }
 }
@@ -121,6 +139,9 @@
     padding: 0;
     margin: 0;
   }
+  @include phone{
+   font-size: 14px;
+  }
 }
 .header__contacts-phone-icon{
   margin-right: 5px;
@@ -138,6 +159,9 @@
 .header__contacts-phone-nmbr{
   display: block;
   height: 35px;
+  @include phone{
+   height: 28px;
+  }
 }
 .header__language{
   display: flex;
@@ -171,6 +195,9 @@
   position: absolute;
   height: 50px;
   left: 999999px;
+  @include phone{
+   height: 30px;
+  }
 }
 .header__language-dropdown-item-active{
   display: flex;
@@ -222,7 +249,16 @@
     transition: .2s linear;
   }
 }
-
+.header__container-lg-down-phone{
+  padding: 10px 0;
+  display: none;
+  .header__socials{
+    margin-left: auto;
+  }
+  @include phone{
+    display: flex;
+  }
+}
 
 
 
