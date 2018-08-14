@@ -1,0 +1,113 @@
+.furniture__wrapper{
+  background: $bgray;
+  .container-lg{
+    display: flex;
+    flex-direction: column;
+  }
+}
+.furniture__hero{
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 60px 0 0 100px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+}
+.furniture__hero-logo{
+  width: 180px;
+  padding: 20px 40px;
+  background: #fff;
+  border-radius: 5px;
+  margin-bottom: 25px;
+
+  img{
+    width: 100px;
+    height: auto;
+  }
+}
+.furniture__hero-text{
+  text-align: center;
+  font-size: 22px;
+  font-weight: 900;
+  width: 180px;
+  padding: 10px 30px;
+  background: #fff;
+  border-radius: 5px;
+}
+.furniture__list{
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: -3%;
+}
+.furniture__item{
+  width: 22%;
+  height: 400px;
+  margin-left: 3%;
+  margin-bottom: 50px;
+  background: #fff;
+  border-radius: 10px;
+}
+.furniture__link{
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: $black;
+  position: relative;
+}
+.furniture__img{
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  img{
+    max-width: 100%;
+  }
+}
+.furniture__name, .furniture__price, .furniture__shipping{
+  padding: 0 10px 10px 20px;
+}
+.furniture__name{
+  h3{
+    font-weight: 600;
+    font-size: 16px;
+  }
+}
+.furniture__price{
+  p{
+    color: $red;
+    font-weight: 900;
+    font-size: 20px;
+    position: relative;
+    display: inline-block;
+
+    &:after{
+      content: "MDL";
+      display: inline-block;
+      left: 100%;
+      position: absolute;
+      padding: 2px 0 0 10px;
+    }
+  }
+}
+.furniture__shipping{
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  padding-bottom: 30px;
+  align-items: center;
+
+  svg, p{
+    color: #1d781d;
+  }
+  svg{
+    margin-right: 10px;
+  }
+  p{
+    font-size: 18px;
+  }
+}

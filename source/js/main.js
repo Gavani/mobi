@@ -5,6 +5,12 @@
       $('.counter').counterUp();
     })();
 
+
+
+
+    console.log($('.furniture__list').children('.furniture__item').length);
+
+
     //___________________/Hamburger/___________________//
     (function(){
       var $checkbox = $('#hamburger__menu-input');

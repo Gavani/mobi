@@ -244,6 +244,9 @@
       }
     }
   }
+  .menu__item-active{
+    .menu__link{color: $red;}
+  }
   .menu__link{
     font-weight: bold;
     transition: .2s linear;
