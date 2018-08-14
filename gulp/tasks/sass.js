@@ -30,7 +30,7 @@ module.exports = function () {
         .pipe($.gp.autoprefixer(
             $.config.browsers
         ))
-        .pipe($.gp.pxtorem)
+        .pipe($.gp.pxtorem())
         .pipe($.gp.csscomb())
         .pipe($.gp.csso())
         .pipe($.gp.rename('main.min.css'))

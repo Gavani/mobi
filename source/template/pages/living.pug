@@ -1,0 +1,11 @@
+extends ../main-layout
+block variables
+  -
+    var title = "Dormitoare";
+    var text  = "dormitoare"
+  
+block content
+  main(role="main" class=`main main__${text}`)
+    include ../parts/header
+    
+  include ../parts/footer 

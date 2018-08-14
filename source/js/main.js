@@ -12,6 +12,13 @@
       var headerheight = $('header').height();
       var bodyWidth    = $('body').width();
 
+      $(window).on('resize' , function(){
+        var resWidth = $('body').width();
+        $('.hamburger__menu-wrap').css({'width': resWidth - 150, 'left' :  -resWidth});
+        if( resWidth <= 400){
+          $('.hamburger__menu-wrap').css('width', '250px');
+        }
+      })
       $('.hamburger__menu-wrap').css({'width': bodyWidth - 150, 'left' :  -bodyWidth});
         $checkbox.change(function(){
           var checked = $(this).prop('checked');
