@@ -1,15 +1,10 @@
 (function($){
   $(document).ready(function(){
+
     //___________________/Counter/___________________//
     (function(){
       $('.counter').counterUp();
     })();
-
-
-
-
-    console.log($('.furniture__list').children('.furniture__item').length);
-
 
     //___________________/Hamburger/___________________//
     (function(){
@@ -19,13 +14,21 @@
       var bodyWidth    = $('body').width();
 
       $(window).on('resize' , function(){
-        var resWidth = $('body').width();
-        $('.hamburger__menu-wrap').css({'width': resWidth - 150, 'left' :  -resWidth});
-        if( resWidth <= 400){
+        var bodyWidth    = $('body').width();
+        $('.hamburger__menu-wrap').css({'left' :  -bodyWidth });
+        if( bodyWidth  <= 400){
           $('.hamburger__menu-wrap').css('width', '250px');
         }
+        else if(bodyWidth  > 400){
+          $('.hamburger__menu-wrap').css({'width': bodyWidth - 150, 'left' :  -bodyWidth});
+        }
       })
-      $('.hamburger__menu-wrap').css({'width': bodyWidth - 150, 'left' :  -bodyWidth});
+      if( bodyWidth  <= 400){
+        $('.hamburger__menu-wrap').css('width', '250px');
+      }
+      else if(bodyWidth  > 400){
+        $('.hamburger__menu-wrap').css({'width': bodyWidth - 150, 'left' :  -bodyWidth});
+      }
         $checkbox.change(function(){
           var checked = $(this).prop('checked');
           console.log(checked);
@@ -50,6 +53,23 @@
           }
         })
     })();
+
+    //___________________/ Pagination /___________________//
+    (function(){
+       $('#pagination-container').pagination({
+        dataSource: function(done){
+          var result = [];
+          var paginationLength = $('.furniture__list').children('.furniture__item').length;
+          for (var i = 1; i < paginationLength; i++){
+            result.push(i);
+          }
+          done(result);
+        },
+        pageSize : 2
+      })
+
+    })();
+
   })
 
 })(jQuery)

@@ -15,6 +15,17 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 100px;
+  @include laptop{
+   height: 300px;
+   padding: 30px 0 0 50px;
+  }
+  @include phone{
+   height: 200px;
+   padding: 20px 0 0 25px;
+  }
+}
+.furniture__hero-pctable{
+  background-position: bottom;
 }
 .furniture__hero-logo{
   width: 180px;
@@ -27,6 +38,16 @@
     width: 100px;
     height: auto;
   }
+  @include phone{
+    width: 91px;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    img{
+      width: 50px;
+    }
+  }
 }
 .furniture__hero-text{
   text-align: center;
@@ -36,11 +57,24 @@
   padding: 10px 30px;
   background: #fff;
   border-radius: 5px;
+  @include phone{
+    text-align: center;
+    font-size: 14px;
+    font-weight: 900;
+    width: 92px;
+    padding: 5px 10px;
+    background: #fff;
+    border-radius: 5px;
+  }
 }
 .furniture__list{
   display: flex;
   flex-flow: row wrap;
   margin-left: -3%;
+  @include minphone{
+    max-width: 330px;
+    margin: 0 auto;
+  }
 }
 .furniture__item{
   width: 22%;
@@ -49,6 +83,24 @@
   margin-bottom: 50px;
   background: #fff;
   border-radius: 10px;
+
+  &:hover{
+    .furniture__link{
+      .furniture__name{
+        text-decoration: underline;
+        color: $blue;
+      }
+    }
+  }
+  @include laptop{
+   width: 30.3%;
+  }
+  @include tablet{
+   width: 47%;
+  }
+  @include minphone{
+   width: 97%;
+  }
 }
 .furniture__link{
   display: block;
@@ -64,8 +116,12 @@
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
   img{
     max-width: 100%;
+    max-height: 100%
   }
 }
 .furniture__name, .furniture__price, .furniture__shipping{
@@ -75,6 +131,7 @@
   h3{
     font-weight: 600;
     font-size: 16px;
+    transition: .2 linear;
   }
 }
 .furniture__price{
@@ -110,4 +167,12 @@
   p{
     font-size: 18px;
   }
+}
+.data-container{
+  display: flex;
+  flex-direction: column;
+}
+#pagination-container{
+  align-self: center;
+  margin-bottom: 50px;
 }
