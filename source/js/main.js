@@ -56,18 +56,33 @@
 
     //___________________/ Pagination /___________________//
     (function(){
-       $('#pagination-container').pagination({
-        dataSource: function(done){
-          var result = [];
-          var paginationLength = $('.furniture__list').children('.furniture__item').length;
-          for (var i = 1; i < paginationLength; i++){
-            result.push(i);
-          }
-          done(result);
-        },
-        pageSize : 2
-      })
+      if($(document).hasClass('.furniture__wrapper')) {
+        $('#pagination-container').pagination({
+          dataSource: function(done){
+            var result = [];
+            var paginationLength = $('.furniture__list').children('.furniture__item').length;
+            for (var i = 1; i < paginationLength; i++){
+              result.push(i);
+            }
+            done(result);
+          },
+          pageSize : 2
+        })
+      }
+    })();
 
+    //___________________/ Slider /___________________//
+    (function(){
+      $('#lightSlider').lightSlider({
+        gallery: true,
+        item: 1,
+        loop: true,
+        slideMargin: 0,
+        thumbItem: 3,
+        auto: true,
+        pause: 6000,
+        pauseOnHover: true
+      });
     })();
 
   })

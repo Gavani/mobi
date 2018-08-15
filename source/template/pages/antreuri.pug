@@ -11,9 +11,12 @@ block content
       .container-lg
         .furniture__hero(class=`furniture__hero-${text}` style="background-image: url('assets/img/backgrounds/menu/couch-3.jpg');")
           .furniture__hero-logo
-            img(src="assets/img/logo/logo.jpg", alt="Logo")
+            a(href="index.html").furniture__hero-logo-link
+              img(src="assets/img/logo/logo.jpg", alt="Logo")
           .furniture__hero-text= title
         .data-container
+          .info__line
+            p= title
           ul.furniture__list
             li.furniture__item
               a(href="#").furniture__link

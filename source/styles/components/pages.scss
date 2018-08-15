@@ -176,3 +176,13 @@
   align-self: center;
   margin-bottom: 50px;
 }
+.info__line{
+  border-bottom: 1px solid #0000004a;
+  width: 65%;
+  margin-bottom: 20px;
+  p{
+    font-size: 14px;
+    font-weight: 900;
+    color: $red;
+  }
+}

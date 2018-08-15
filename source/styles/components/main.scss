@@ -25,25 +25,23 @@
 }
 .hero__logo{
   background: #fff;
-  width: 250px;
-  height: 100px;
+  width: 200px;
   margin-bottom: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 3px;
-  h1{
-    font-size: 36px;
-    font-weight: 900;
-    color: $red;
+  padding: 10px;
+  img{
+    max-width: 100%;
+  }
+  @include tablet{
+   width: 150px;
   }
   @include phone{
-   width: 165px;
-   height: 75px;
+   width: 100px;
    margin-bottom: 15px;
-   h1{
-     font-size: 24px;
-   }
+
   }
 }
 .hero__form-serch-label{

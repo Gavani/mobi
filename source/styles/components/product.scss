@@ -1,0 +1,133 @@
+.product__wrapper{
+  padding-top: 50px;
+}
+.product__wrapper-top{
+  display: flex;
+}
+.product__slider{
+  width: 600px;
+  margin-right: 100px;
+  ul {
+    list-style: none outside none;
+    padding-left: 0;
+    margin-bottom:0;
+  }
+  li {
+    display: block;
+    float: left;
+    margin-right: 6px;
+    cursor:pointer;
+  }
+  img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+  }
+}
+#lightSlider{
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lSSlideWrapper{
+  margin-bottom: 25px;
+}
+.product__short-info{
+  position: relative;
+
+  &:after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background: #eeeeee;
+    right: 99%;
+    margin-right: 50px;
+    top: 0;
+  }
+}
+.product__name{
+  font-size: 20px;
+}
+.product__more{
+  padding-bottom: 50px;
+
+  a{
+    font-size: 14px;
+    color: $blue;
+    font-weight: 900;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+}
+.product__price{
+  margin-bottom: 10px;
+  p{
+    color: $red;
+    font-weight: 900;
+    font-size: 28px;
+    span{
+      color: $txtgray;
+      padding-right: 20px;
+    }
+    &:after{
+      content: "MDL";
+      padding-left: 10px;
+    }
+  }
+}
+.product__shipping{
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+  svg, p{
+    color: green;
+    font-size: 20px;
+    font-weight: 900;
+  }
+  svg{
+    margin-right: 10px;
+  }
+}
+.product__contact{
+  display: flex;
+  flex-direction: column;
+  p, a{
+    font-size: 16px;
+    color: $txtgray;
+    font-weight: 900;
+  }
+  p{
+    margin-bottom: 50px;
+    a{
+      margin: 0 10px 0 10px;
+      color: $blue;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+}
+.product__call{
+  align-self: center;
+  display: inline-block;
+  padding: 20px 40px;
+  border-radius: 5px;
+  background: $blue;
+  font-size: 20px !important;
+  color: #fff !important;
+  text-decoration: none;
+  font-weight: 200 !important;
+  transition: .2s linear;
+
+  svg{
+    color: #fff;
+    margin-right: 5px;
+  }
+  &:hover{
+    background: #2b5661;
+  }
+}

@@ -45,6 +45,10 @@
   transition: .5s linear;
 }
 .menu__hamburger{
+  .menu__list{
+    display: flex;
+    flex-direction: column;
+  }
   .menu__item{
     position: relative;      
     &:after, &:before{
@@ -61,6 +65,12 @@
     &::before{
       bottom: 100%;
     }
+  }
+  .menu__item-active{
+    order: -1;
+    .menu__link{
+      color: $red;
+   }
   }
   .menu__link{
     font-size: 16px;

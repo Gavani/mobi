@@ -25,6 +25,16 @@
   }
 }
 .header__logo{
+  width: 100px;
+  img{
+    max-width: 100%;
+    @include phone{
+      max-width: 50px;
+    }
+  }
+  @include tablet{
+   width: 70px;
+  }
   @include phone{
     flex: 1;
   }
@@ -32,9 +42,7 @@
 .header__logo-link{
   text-decoration: none;
   color: $black;
-  @include laptop{
-   font-size: 24px;
-  }
+  display: block;
 }
 .header__contacts{
   padding-right: 10px;
