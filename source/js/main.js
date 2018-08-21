@@ -53,7 +53,7 @@
 
     //___________________/ Pagination /___________________//
     (function(){
-      if($(document).hasClass('.furniture__wrapper')) {
+      if($('.furniture__wrapper')[0]){
         $('#pagination-container').pagination({
           dataSource: function(done){
             var result = [];
