@@ -35,21 +35,18 @@
 
           if(checked == true){
             $('.wrapper').css('height', menuHeight + headerheight);
-            $('main').addClass('main-covered');
 
             $(document).mouseup(function (e){ 
               var div = $(".hamburger__menu"); 
               if (!div.is(e.target)
                   && div.has(e.target).length === 0) {
                   $('.wrapper').css({'min-height':'100%', 'height':'auto'});
-                  $('main').removeClass('main-covered');
                   $("#hamburger__menu-input").prop("checked", false);
               }
             });
           }
           else{
             $('.wrapper').css({'min-height':'100%', 'height':'auto'});
-            $('main').removeClass('main-covered');
           }
         })
     })();
@@ -82,6 +79,14 @@
         auto: true,
         pause: 6000,
         pauseOnHover: true
+      });
+    })();
+
+    //___________________/ Accordion /___________________//
+    (function(){
+      $('.accordion').accordion({
+        "transitionSpeed": 400,
+        "singleOpen" : false
       });
     })();
 

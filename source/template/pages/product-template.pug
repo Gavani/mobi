@@ -1,0 +1,81 @@
+extends ../main-layout
+block variables
+  -
+    var title = "AXILinteriors";
+
+block content
+  main(role="main").main
+    include ../parts/header
+    .product__wrapper.product__wrapper-top
+      .container-lg
+        .product__slider
+          ul#lightSlider
+            li(data-thumb='assets/img/backgrounds/menu/bedroom-1.jpg')
+              img(src='assets/img/backgrounds/menu/bedroom-1.jpg')
+            li(data-thumb='assets/img/backgrounds/menu/bed-3.jpg')
+              img(src='assets/img/backgrounds/menu/bed-3.jpg')
+            li(data-thumb='assets/img/backgrounds/menu/bed-3.jpg')
+              img(src='assets/img/backgrounds/menu/bed-3.jpg')
+            li(data-thumb='assets/img/backgrounds/menu/bedroom-1.jpg')
+              img(src='assets/img/backgrounds/menu/bedroom-1.jpg')
+            li(data-thumb='assets/img/backgrounds/menu/bed-3.jpg')
+              img(src='assets/img/backgrounds/menu/bed-3.jpg')
+            li(data-thumb='assets/img/backgrounds/menu/bed-3.jpg')
+              img(src='assets/img/backgrounds/menu/bed-3.jpg')
+            li(data-thumb='assets/img/backgrounds/menu/bedroom-1.jpg')
+              img(src='assets/img/backgrounds/menu/bedroom-1.jpg')
+            li(data-thumb='assets/img/backgrounds/menu/antreu-1.jpg')
+              img(src='assets/img/backgrounds/menu/antreu-1.jpg')
+        .product__short-info
+          .product__name
+            h1 Pat Clasic
+          .product__more
+            a(href="dormitoare.html") Doriți să vedeți mai multe produse de acest tip?
+          //- .product__name-info
+          //-   p modificari cu mecanizm,depozitare no box
+          .product__price
+            p 
+              span Prețul produsului : 
+              | 4569
+          .product__shipping
+            <i class="fas fa-shipping-fast"></i>
+            p Livrare disponibilă în orice colț al țării
+          .product__contact
+            p 
+              | Doriti să procurați acest produs ? Atunci nu ezitați să ne contactați la numărul 
+              a(href="tel:+37300000000") +373 00 000 000 
+              | ! Sau click pe butonul de mai jos
+            a.product__call(href="tel:+37300000000") 
+              <i class="fas fa-phone"></i>
+              | Sună-ne!!! 
+    .product__wrapper.product__wrapper-bottom
+      .container-lg
+        .product__wrapper-bottom
+          .product__info
+            .product__info-head
+              p Despre produs
+            div(data-accordion-group='')
+              .accordion.open(data-accordion='')
+                div(data-control='').accordion-head.product__info-desc-top 
+                  | Descriere produs
+                  span.carret.carret-open
+                div(data-content='').accordion-text
+                  p Luând o siluetă contemporană, curată, acest pat de panou versatil stabilește o fundație subțire în spațiul dvs. Fabricat cu un cadru fabricat din lemn și placaj, această piesă prietenoasă din punct de vedere al bugetului este tapițată cu material textil din poliester, într-un ton ușor kaki care completează cele mai multe palete de culori. Acest design este completat cu patru lamele centrale pentru a vă ajuta să vă sprijiniți salteaua și arcul cutiei (este necesar) și trebuie să fie asamblat.
+              .accordion(data-accordion='')
+                div(data-control='').accordion-head.product__info-dims-head 
+                  |Dimensiuni
+                  span.carret.carret-closed
+                div(data-content='').accordion-text
+                  table
+                    tr
+                      td
+                        p Dimensiunile produsului
+                      td
+                        p 140x200 160x200 (190) 180x200 200x200
+              .accordion(data-accordion='')
+                div(data-control='').accordion-head.product__modifications 
+                  |Modificări
+                  span.carret.carret-closed
+                div(data-content='').accordion-text
+                  p Modificările produsului se realizează la comandă
+  include ../parts/footer

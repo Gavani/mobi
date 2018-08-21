@@ -7,5 +7,6 @@ module.exports = [
   './node_modules/jquery.counterup/jquery.counterup.min.js',
   './node_modules/paginationjs/src/pagination.js',
   './node_modules/lightslider/src/js/lightslider.js',
-  './node_modules/lightgallery/src/js/lightgallery.js'
+  './node_modules/lightgallery/src/js/lightgallery.js',
+  './source/js/jq-accordion.js'
 ];
